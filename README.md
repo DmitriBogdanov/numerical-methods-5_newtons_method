@@ -2,8 +2,10 @@
 
 Contains implementations of following numerical methods:
 
-* Newton's method for solving nonlinear equations
-* Newton's method for solving systems of nonlinear equations
+* Bisection method
+* Secant method
+* Newton's method
+* Newton's method for systems
 
 Note that present implementations are intended for academic purposes, as such they are not meant to be used in any sort of high-performance production code.
 
@@ -18,15 +20,20 @@ Note that present implementations are intended for academic purposes, as such th
 
 ## Usage
 
-Place config file of the following format into the same folder as executable:
-
-* Line 1: INPUT_FILEPATH [value without whitespaces]
-* Line 2: OUTPUT_FOLDER [value without whitespaces]
-* Line 3: PRECISION
-
-Refer to 'config.txt' as an example. Upon execution no furter inputs are required.
+Precision, max iterations and other parameters are entered as consts before main(). 
 
 ## Version history
+
+* 00.02
+    * Implemented Newton's method
+    * Implemented Newton's method for systems
+    * Implemented secant method
+    * Implemented bisection method
+    * Both Newton methods can be toggled between analythical and numeric derivatives
+    * Impremented trackers for convergence order in each method
+
+* 00.01
+    * Created core math methods
 
 ## License
 
